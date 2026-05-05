@@ -98,36 +98,20 @@ Sử dụng LLM để chuyển văn bản thành các bộ ba (triples):
 ![Đồ thị tri thức](./image/Đồ%20thị%20tri%20thức.png)
 ![Đồ thị tri thức](./image/Đồ%20thị%20tri%20thức1.png)
 
-
-
 ---
 
 ### 📌 Bảng kết quả benchmark
 
-![Results](.image/Đồ thị tri thức.png)
+![Biểu đồ so](./image/Đồ%20thị%20tri%20thức1.png)
 
 ---
 
 ### 📌 Biểu đồ so sánh
 
-![result 1](image/{Đồ thị tri thức}.png)
-
-
----
-
-## 📁 Cấu trúc project
-
-```text
-.
-├── notebook.ipynb
-├── results.csv
-├── images/
-│   ├── graph.png
-│   ├── results.png
-│   └── chart.png
-```
+![Biểu đồ so sánh](./image/so20%sánh%Benhmark.png)
 
 ---
+
 
 ## 🏁 Kết luận
 
