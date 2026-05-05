@@ -108,7 +108,8 @@ Sử dụng LLM để chuyển văn bản thành các bộ ba (triples):
 
 ### 📌 Biểu đồ so sánh
 
-![Chart](./images/chart.png)
+![result 1](image/{Đồ thị tri thức}.png)
+
 
 ---
 
