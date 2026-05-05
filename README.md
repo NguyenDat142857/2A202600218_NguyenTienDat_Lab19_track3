@@ -98,7 +98,7 @@ Sử dụng LLM để chuyển văn bản thành các bộ ba (triples):
 ## 🖼️ Kết quả trực quan
 
 ### 📌 Knowledge Graph
-
+Đồ thị tri thức.png
 ![Graph](Đồ thị tri thức.png)
 
 ---
