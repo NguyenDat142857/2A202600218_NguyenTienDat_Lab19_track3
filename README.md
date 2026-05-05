@@ -1,6 +1,5 @@
 # 2A202600218_NguyenTienDat_Lab19_track3
 ---
-![Đồ thị tri thức](./image/Đồ%20thị%20tri%20thức.png)
 
 # 🚀 GraphRAG System – Tech Company Corpus
 
@@ -96,8 +95,10 @@ Sử dụng LLM để chuyển văn bản thành các bộ ba (triples):
 ## 🖼️ Kết quả trực quan
 
 ### 📌 Knowledge Graph
-![Knowledge Graph](./image/Đồ thị tri thức.png)
-![Graph](Đồ thị tri thức.png)
+![Đồ thị tri thức](./image/Đồ%20thị%20tri%20thức.png)
+![Đồ thị tri thức](./image/Đồ%20thị%20tri%20thức1.png)
+
+
 
 ---
 
