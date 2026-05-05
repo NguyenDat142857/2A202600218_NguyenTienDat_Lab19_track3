@@ -102,7 +102,7 @@ Sử dụng LLM để chuyển văn bản thành các bộ ba (triples):
 
 ### 📌 Bảng kết quả benchmark
 
-![Results](./images/results.png)
+![Results](.image/Đồ thị tri thức.png)
 
 ---
 
