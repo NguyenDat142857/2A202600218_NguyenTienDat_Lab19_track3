@@ -1,5 +1,6 @@
 # 2A202600218_NguyenTienDat_Lab19_track3
 ---
+![Đồ thị tri thức](./image/Đồ%20thị%20tri%20thức.png)
 
 # 🚀 GraphRAG System – Tech Company Corpus
 
