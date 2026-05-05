@@ -1,8 +1,5 @@
 # 2A202600218_NguyenTienDat_Lab19_track3
 ---
-Dưới đây là **README phiên bản tiếng Việt + có chỗ chèn ảnh screenshot** để bạn copy thẳng lên GitHub 👇
-
----
 
 # 🚀 GraphRAG System – Tech Company Corpus
 
@@ -98,7 +95,7 @@ Sử dụng LLM để chuyển văn bản thành các bộ ba (triples):
 ## 🖼️ Kết quả trực quan
 
 ### 📌 Knowledge Graph
-Đồ thị tri thức.png
+![Knowledge Graph](./image/Đồ thị tri thức.png)
 ![Graph](Đồ thị tri thức.png)
 
 ---
