@@ -1,27 +1,29 @@
 # 2A202600218_NguyenTienDat_Lab19_track3
 ---
-
-# 🚀 GraphRAG System – Tech Company Corpus
-
-## 📌 Overview
-
-This project implements a **GraphRAG (Graph-based Retrieval Augmented Generation)** system to improve question answering over a Tech Company dataset.
-
-We compare:
-
-* **Flat RAG** (vector-based retrieval)
-* **GraphRAG** (knowledge graph + multi-hop reasoning)
+Dưới đây là **README phiên bản tiếng Việt + có chỗ chèn ảnh screenshot** để bạn copy thẳng lên GitHub 👇
 
 ---
 
-## ⚙️ Pipeline
+# 🚀 GraphRAG System – Tech Company Corpus
 
-### 1. Entity & Relation Extraction
+## 📌 Tổng quan
 
-* Use LLM to extract triples from text
-* Example:
+Dự án này xây dựng hệ thống **GraphRAG (Graph-based Retrieval Augmented Generation)** nhằm cải thiện khả năng trả lời câu hỏi từ dữ liệu về các công ty công nghệ.
 
-```
+So sánh 2 phương pháp:
+
+* **Flat RAG**: truy xuất dựa trên vector (TF-IDF / embedding)
+* **GraphRAG**: sử dụng đồ thị tri thức + suy luận đa bước (multi-hop)
+
+---
+
+## ⚙️ Pipeline hệ thống
+
+### 1. Trích xuất thực thể & quan hệ
+
+Sử dụng LLM để chuyển văn bản thành các bộ ba (triples):
+
+```text
 (OpenAI, FOUNDED_BY, Sam Altman)
 (OpenAI, FOUNDED_BY, Elon Musk)
 (OpenAI, FOUNDED_IN, 2015)
@@ -29,77 +31,110 @@ We compare:
 
 ---
 
-### 2. Graph Construction
+### 2. Xây dựng đồ thị tri thức
 
-* Build Knowledge Graph using **NetworkX**
-* Nodes: entities (company, person)
-* Edges: relations (FOUNDED_BY, ACQUIRED_BY, …)
-
----
-
-### 3. Querying (GraphRAG)
-
-* Extract entity from question
-* Traverse graph using **2-hop BFS**
-* Convert subgraph → text → send to LLM
+* Sử dụng **NetworkX**
+* Node: thực thể (công ty, con người…)
+* Edge: quan hệ (FOUNDED_BY, ACQUIRED_BY…)
 
 ---
 
-### 4. Baseline (Flat RAG)
+### 3. Truy vấn GraphRAG
 
-* Use text retrieval (TF-IDF / vector search)
-* No structured reasoning
-
----
-
-## 📊 Results (20 Questions Benchmark)
-
-| Method   | Accuracy |
-| -------- | -------- |
-| Flat RAG | 55%      |
-| GraphRAG | 100%     |
-
-👉 GraphRAG significantly outperforms Flat RAG, especially in **multi-hop reasoning tasks**.
+* Trích xuất entity từ câu hỏi
+* Duyệt đồ thị bằng **BFS 2-hop**
+* Tổng hợp thông tin → gửi vào LLM
 
 ---
 
-## 🧠 Key Insights
+### 4. Flat RAG (baseline)
 
-### ❌ Flat RAG limitations
-
-* Cannot handle multi-hop reasoning
-* Easily retrieves irrelevant context
-* Higher hallucination risk
-
-### ✅ GraphRAG advantages
-
-* Uses structured knowledge graph
-* Supports multi-step reasoning
-* More accurate and consistent answers
+* Truy xuất văn bản bằng TF-IDF / vector search
+* Không có cấu trúc quan hệ
 
 ---
 
-## 💰 Cost Analysis
+## 📊 Kết quả đánh giá (20 câu hỏi)
 
-* **Flat RAG**: faster, lower token usage
-* **GraphRAG**: higher cost (graph building + traversal)
-* Trade-off:
-  → GraphRAG = higher cost but much better accuracy
+| Phương pháp | Accuracy |
+| ----------- | -------- |
+| Flat RAG    | 55%      |
+| GraphRAG    | 100%     |
 
----
-
-## 📁 Deliverables
-
-* ✅ Source code (.ipynb)
-* ✅ Knowledge graph visualization
-* ✅ Benchmark results (20 questions)
-* ✅ Accuracy comparison & analysis
+👉 GraphRAG vượt trội rõ rệt trong các câu hỏi cần **multi-hop reasoning**
 
 ---
 
-## 🏁 Conclusion
+## 🧠 Nhận xét
 
-GraphRAG provides a more reliable and powerful approach for QA systems by leveraging structured knowledge and multi-hop reasoning, making it superior to traditional Flat RAG in complex queries.
+### ❌ Flat RAG
+
+* Không hiểu quan hệ giữa các thực thể
+* Dễ retrieve sai context
+* Không xử lý được multi-hop
+
+### ✅ GraphRAG
+
+* Dựa trên đồ thị tri thức
+* Suy luận nhiều bước
+* Trả lời chính xác hơn, ít hallucination
 
 ---
+
+## 💰 Phân tích chi phí
+
+* **Flat RAG**:
+
+  * Nhanh, ít token
+* **GraphRAG**:
+
+  * Tốn token hơn (do extraction + graph context)
+  * Chậm hơn ở bước build graph
+
+👉 Trade-off: **GraphRAG tốn chi phí hơn nhưng accuracy cao hơn đáng kể**
+
+---
+
+## 🖼️ Kết quả trực quan
+
+### 📌 Knowledge Graph
+
+![Graph](./images/graph.png)
+
+---
+
+### 📌 Bảng kết quả benchmark
+
+![Results](./images/results.png)
+
+---
+
+### 📌 Biểu đồ so sánh
+
+![Chart](./images/chart.png)
+
+---
+
+## 📁 Cấu trúc project
+
+```text
+.
+├── notebook.ipynb
+├── results.csv
+├── images/
+│   ├── graph.png
+│   ├── results.png
+│   └── chart.png
+```
+
+---
+
+## 🏁 Kết luận
+
+GraphRAG là một hướng tiếp cận mạnh mẽ cho bài toán QA, đặc biệt khi:
+
+* Dữ liệu có nhiều quan hệ
+* Cần suy luận nhiều bước
+
+👉 Hiệu quả hơn Flat RAG trong các bài toán thực tế phức tạp.
 
