@@ -99,7 +99,7 @@ Sử dụng LLM để chuyển văn bản thành các bộ ba (triples):
 
 ### 📌 Knowledge Graph
 
-![Graph](./images/graph.png)
+![Graph](Đồ thị tri thức.png)
 
 ---
 
